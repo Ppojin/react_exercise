@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component, Fragment} from 'react';
+import MyRcc from "./components/MyRcc";
+import MyRsf from "./components/MyRsf";
+import MyButton from "./components/MyButton";
+import MyEvent from "./components/MyEvent";
+import MyRefDom from "./components/MyRefDom";
+import MyCallbackMap from "./components/MyCallbackMap";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <Fragment>
+                <h1>Hello React</h1>
+                <h2>Hello React2</h2>
+                <MyRcc name={`"클래스 컴포넌트"`} age={10}/>
+                {/*<MyRcc age={`"asdf"`}/>*/}
+                {/*<MyRcc name={300}/>*/}
+                <MyRsf name={`"함수형 컴포넌트"`} age={15}/>
+                <MyButton/>
+                <MyEvent/>
+                <MyRefDom/>
+                <MyCallbackMap/>
+            </Fragment>
+        );
+    }
 }
 
 export default App;
